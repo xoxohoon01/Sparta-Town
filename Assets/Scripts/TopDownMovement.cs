@@ -1,4 +1,5 @@
-﻿using UnityEditor.Experimental.GraphView;
+﻿using Unity.Burst;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class TopDownMovement : MonoBehaviour
@@ -8,6 +9,7 @@ public class TopDownMovement : MonoBehaviour
     private Animator animator;
 
     private Vector2 movementDirection = Vector2.zero;
+    [SerializeField] private float moveSpeed = 5f;
 
     private void Move(Vector2 direction)
     {
@@ -16,8 +18,16 @@ public class TopDownMovement : MonoBehaviour
 
     private void ApplyMovement(Vector2 direction)
     {
-        direction = direction * 5;
+        
+        direction = direction * moveSpeed;
         movementRigidbody.velocity = direction;
+        
+    }
+
+    private void ApplyAnimation()
+    {
+        if (movementRigidbody.velocity.magnitude != 0) animator.SetBool("isWalk", true);
+        else animator.SetBool("isWalk", false);
     }
 
     private void Awake()
@@ -35,6 +45,11 @@ public class TopDownMovement : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyMovement(movementDirection);
+    }
+
+    private void Update()
+    {
+        ApplyAnimation();
     }
 
 }
