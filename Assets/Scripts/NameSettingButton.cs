@@ -7,13 +7,15 @@ using UnityEngine.UI;
 
 public class NameSettingButton : MonoBehaviour
 {
+    private CharacterStat newCharacter = new CharacterStat();
     public InputField nameInputField;
 
     public void onClick()
     {
         if (nameInputField.text != "")
         {
-            GameManager.Instance.SetName(nameInputField.text);
+            newCharacter = new CharacterStat(nameInputField.text, 10);
+            GameManager.Instance.SetCharacter(newCharacter);
             SceneManager.LoadScene("MainScene");
         }
         else

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Build.Content;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,11 +12,11 @@ public class GameManager : MonoBehaviour
         get { return instance; }
     }
 
-    private string Name;
+    public CharacterStat newCharacter = new CharacterStat();
 
-    public void SetName(string name)
+    public void SetCharacter(CharacterStat _character)
     {
-        Name = name;
+        newCharacter = _character;
     }
 
     private void Awake()
