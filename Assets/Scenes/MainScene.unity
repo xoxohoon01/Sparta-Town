@@ -26501,7 +26501,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad09eab4852e25748b2016cf0fb4ba16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 4046725081420680534, guid: 938c79ffbeba50f489680900c8b8c6c8, type: 3}
+  Penguin: {fileID: 4046725081420680534, guid: 938c79ffbeba50f489680900c8b8c6c8, type: 3}
+  Cat: {fileID: 4046725081420680534, guid: d6683e9c304e23f4db79f48dd1c928d8, type: 3}
 --- !u!4 &1158414411
 Transform:
   m_ObjectHideFlags: 0
@@ -33406,6 +33407,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1914985876}
+  - {fileID: 1158414411}
   - {fileID: 1436706027}
   - {fileID: 2024411028}
-  - {fileID: 1158414411}
