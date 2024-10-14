@@ -13,6 +13,7 @@
 
 캐릭터와 이름을 설정한 뒤 Join 버튼을 클릭하면 </br>
 메인씬으로 이동합니다. </br>
+좌측 하단의 두 개의 버튼은 아쉽게도 미구현입니다. </br>
 ![image](https://github.com/xoxohoon01/Sparta-Town/blob/main/4.png) </br>
 
 NPC에게 다가가면 메시지가 출력됩니다. </br>
